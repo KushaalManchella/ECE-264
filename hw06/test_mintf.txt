@@ -1,0 +1,12 @@
+12512
+The integer is 151!
+20 is written as 0x14 in hexadecimal
+51 is written as 0b110011 in binary
+I got an 84% in my ECE homework
+I got an 84% in my ECE homework
+Bernard is a dog with 20 bones
+She has $25.02 dollars in her bank
+Why is this not working? -$80.33  % lsdfsdf
+Why is this not working? $80.00  % lsdfsdf
+What happens with too many arguments
+the wrong specifier gives %z

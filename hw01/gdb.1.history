@@ -1,0 +1,25 @@
+set logging file gdb.1.log
+set logging on
+set history filename gdb.1.history
+set history save 
+gcc -g -o prime_factor prime_factor.c test_prime_factor.c
+run
+backtrace
+frame 6
+list
+info args
+info locals
+breakpoint main 
+break main 
+run
+step
+break 28
+run
+continue
+print n
+step
+print n
+step
+print n 
+print n
+quit

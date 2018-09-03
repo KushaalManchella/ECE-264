@@ -1,0 +1,10 @@
+Node at beginning :
+1->2->3->4->5->NULL
+Deqeueu:2->3->4->5->NULL
+
+stack_push:3->2->3->4->5->NULL
+
+stack_pop:2->3->4->5->NULL
+
+remove_last_node:2->3->4->5->NULL
+

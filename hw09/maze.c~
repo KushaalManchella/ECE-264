@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "maze.h"
+
+void find_maze_dimensions(FILE * fp, int * a_num_rows, int * a_num_cols) {
+
+	fseek( fp, 0, SEEK_SET);
+    *a_num_rows = *a_num_cols = 0;
+    int ch = 0;
+    printf("nothing");
+ 	while(ch != '\n')
+	{
+		ch = fgetc(fp);
+		(*a_num_rows)++;
+	}
+	*a_num_rows = *a_num_rows - 1;
+    
+	fseek(fp, 0L, SEEK_END);
+	int sz = ftell(fp);
+
+	*a_num_cols = sz / *a_num_rows;
+	printf("a_num_cols = %d\n", *a_num_cols);
+	printf("a_num_rows = %d\n", *a_num_rows);
+}
+
+int find_opening_location(FILE * fp) {
+	
+   fseek( fp, 0, SEEK_SET);
+   int ch = 0;
+   int opening_loc = 0;
+   while(ch != PATH)
+   {
+	   ch = fgetc(fp);
+	   opening_loc++;
+	   
+	}
+   opening_loc -= 1;
+   printf("opening location = %d\n", opening_loc);
+
+   return opening_loc;
+}
+
+int count_path_locations(FILE * fp) {
+	fseek( fp, 0, SEEK_SET);
+	int ch = 0;
+	int num_locations = 0;
+	while(!feof(fp))
+	{
+		ch = fgetc(fp);
+		if( ch == PATH)
+		{
+			num_locations++;
+		}
+	}
+	printf("num locations = %d\n", num_locations);
+   return num_locations;
+}
+
+char get_location_type(FILE * fp, int row, int col) {
+	fseek( fp, 0, SEEK_SET);
+	//int ch = 0;
+	int location = 0;
+	while(!feof(fp))
+	{
+		printf("DONT KILL YOURSELF\n");
+		while(location != '\n' && (feof(EOF) == 0) )
+		{
+			location = fgetc(fp);
+			col++;
+			printf("LOL\n");
+		}
+		col -= 1;
+		row++;
+	}
+	row -= 1;
+	
+		
+	return location;
+}
+ 
+int represent_maze_in_one_line(char * filename, FILE * fp) {
+   return 0;
+}
